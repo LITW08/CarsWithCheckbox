@@ -1,0 +1,30 @@
+﻿<div style="height: 80vh;" class="row justify-content-center align-items-center">
+    <div class="col-md-6 jumbotron">
+        <h3>Add Car</h3>
+        <form method="post" action="/home/addcar">
+            <input type="text" class="form-control" placeholder="Make" name="make" id="make" />
+            <br />
+            <input type="text" class="form-control" placeholder="Model" name="model" id="model" />
+            <br />
+            <input type="text" class="form-control" placeholder="Year" name="year" id="year" />
+            <br />
+            <input type="text" class="form-control" placeholder="Price" name="price" id="price" />
+            <br />
+            <select class="form-control" name="cartype" id="car-type">
+                <option value="-1">-- Choose Car Type --</option>
+                <option value="0">Sedan</option>
+                <option value="1">SUV</option>
+                <option value="2">Supercar</option>
+            </select>
+
+            <input type="checkbox" id="has-leather-seats" name="hasLeatherSeats" value="true" />
+            Has Leather Seats
+            <br />
+            <button disabled class="btn btn-primary" id="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/add-car.js"></script>
+}
